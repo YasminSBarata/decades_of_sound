@@ -128,4 +128,4 @@ st.markdown("""
 # 8. Download dos dados filtrados
 st.download_button("⬇️ Baixar dados filtrados (CSV)", df_filt.to_csv(index=False), file_name="dados_filtrados.csv")
 
-st.caption("Dashboard desenvolvido com ❤️ para análise de tendências musicais.")
+st.caption("Dashboard desenvolvido para análise de tendências musicais.")
