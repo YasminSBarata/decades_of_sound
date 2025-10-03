@@ -104,7 +104,7 @@ streamlit run dashboard.py
 Seu navegador vai abrir uma janela com a aplicação. Aproveite!
 
 ✍️ O DJ por Trás dos Dados
-Feito com 🎸 e muito código por [Seu Nome]
+Feito com 🎸 e muito código por Yasmin Barata e Ana Alice Dias
 
 <div align="center">
 
