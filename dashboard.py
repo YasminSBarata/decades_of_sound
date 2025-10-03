@@ -28,18 +28,22 @@ st.markdown("""
         color: white;
     }
     .metric-card {
-        background-color: #f0f2f6;
+        background: rgba(255,255,255,0.06);
         padding: 1.5rem;
         border-radius: 10px;
         border-left: 5px solid #FF6B6B;
         margin: 0.5rem 0;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12)
+        justify-content: center;
+        text-align: center;
     }
     .insight-box {
-        background-color: #fff3cd;
+       
         padding: 1rem;
         border-radius: 8px;
         border-left: 4px solid #ffc107;
         margin: 1rem 0;
+        background: rgba(255,255,255,0.06)
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 24px;
@@ -58,9 +62,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Carregar dados
-    df = pd.read_csv('music.csv')
-
-    
+    df = pd.read_csv('music_com_decade.csv')
     
     # Verificar se já tem decade
     if 'decade' not in df.columns:
@@ -528,34 +530,35 @@ with tab4:
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("""
-        <div class="metric-card">
-        <h3 style="color: #FF6B6B;">🔺 Maior Crescimento</h3>
-        <h2>Obscene</h2>
-        <p style="font-size: 1.5rem; font-weight: bold; color: green;">+178%</p>
-        <p>De 5.7% → 16% das músicas</p>
-        </div>
-        """, unsafe_allow_html=True)
+           st.markdown("""
+    <div class="metric-card">
+      <h3 style="color: #FF6B6B;">🔺 Maior Crescimento</h3>
+      <h2 style="color: #FF6B6B;">Obscene</h2>
+      <p style="font-size: 1.5rem; font-weight: bold; color: #00C853;">+178%</p>
+      <p>De 5.7% → 16% das músicas</p>
+    </div>
+    """, unsafe_allow_html=True)
     
     with col2:
-        st.markdown("""
-        <div class="metric-card">
-        <h3 style="color: #4169E1;">🔻 Maior Declínio</h3>
-        <h2>Romantic</h2>
-        <p style="font-size: 1.5rem; font-weight: bold; color: red;">-77%</p>
-        <p>De 12.1% → 2.8% das músicas</p>
-        </div>
-        """, unsafe_allow_html=True)
+         st.markdown("""
+    <div class="metric-card">
+      <h3 style="color: #4169E1;">🔻 Maior Declínio</h3>
+      <h2 style="color: #4169E1;">Romantic</h2>
+      <p style="font-size: 1.5rem; font-weight: bold; color: #FF5252;">-77%</p>
+      <p>De 12.1% → 2.8% das músicas</p>
+    </div>
+    """, unsafe_allow_html=True)
+
     
     with col3:
         st.markdown("""
-        <div class="metric-card">
-        <h3 style="color: #FFD700;">🎭 Mood Dominante</h3>
-        <h2>Happy/Energetic</h2>
-        <p style="font-size: 1.5rem; font-weight: bold;">~30%</p>
-        <p>Empatado com Sad/Calm</p>
-        </div>
-        """, unsafe_allow_html=True)
+    <div class="metric-card">
+      <h3 style="color: #FFD700;">🎭 Mood Dominante</h3>
+      <h2 style="color: #FFD700;">Happy/Energetic</h2>
+      <p style="font-size: 1.5rem; font-weight: bold;">~30%</p>
+      <p>Empatado com Sad/Calm</p>
+    </div>
+    """, unsafe_allow_html=True)
     
     st.markdown("---")
     
