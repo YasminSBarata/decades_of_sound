@@ -95,9 +95,6 @@ def load_data():
 
 # Carregar dados
 df = load_data()
-st.sidebar.write("DEBUG - Décadas únicas no dataset:")
-st.sidebar.write(sorted(df['decade'].unique()))
-st.sidebar.write(f"Tipo da coluna decade: {df['decade'].dtype}")
 
 # HEADER
 st.markdown('<div class="main-header">🎵 70 Anos de Evolução Musical (1950-2019)</div>', unsafe_allow_html=True)
@@ -238,7 +235,7 @@ with tab1:
     
     fig, ax = plt.subplots(figsize=(14, 7))
     
-    colors_features = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#95E1D3']
+    colors_features = ['#FF6B6B', '#4ECDC4', '#FFE66D', "#B28CE3"]
     markers = ['o', 's', '^', 'D']
     
     for feature, color, marker in zip(audio_features, colors_features, markers):
